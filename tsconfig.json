@@ -27,5 +27,8 @@
               "src/*.ts"
           ]
       }
-  }
+  },
+  "angularCompilerOptions": {
+    "disableTypeScriptVersionCheck": true,
+ }
 }
