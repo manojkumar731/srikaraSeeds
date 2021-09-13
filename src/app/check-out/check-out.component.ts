@@ -12,4 +12,8 @@ export class CheckOutComponent implements OnInit {
   constructor(public router: Router) {}
 
   ngOnInit(): void {}
+
+  navigateToLogin() {
+    this.router.navigate(["/login"]);
+  }
 }

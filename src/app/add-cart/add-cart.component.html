@@ -75,42 +75,6 @@
                       <span class="amount">£15.00</span>
                     </td>
                   </tr>
-                  <tr>
-                    <td class="actions" colspan="6">
-                      <div class="coupon">
-                        <label for="coupon_code">Coupon:</label>
-                        <input
-                          type="text"
-                          placeholder="Coupon code"
-                          value=""
-                          id="coupon_code"
-                          class="input-text"
-                          name="coupon_code"
-                        />
-                        <input
-                          type="submit"
-                          value="Apply Coupon"
-                          name="apply_coupon"
-                          class="button"
-                        />
-                      </div>
-                      <!-- <button type="submit" name="update_cart" class="button" [routerLink]="['/checkOut']" routerLinkActive="router-link-active" >
-                        Update Cart
-                      </button>
-                      >
-                      <input
-                        type="submit"
-                        value="Checkout"
-                        name="proceed"
-                        class="checkout-button button alt wc-forward"
-                      /> -->
-
-                      <button class="button" routerLink="/addCart">
-                        Update Cart
-                      </button>
-                      <a routerLink="/addCart"> Check Out </a>
-                    </td>
-                  </tr>
                 </tbody>
               </table>
             </form>
@@ -196,6 +160,7 @@
                     </tr>
                   </tbody>
                 </table>
+                <button class="btn-primary btn mt-4" (click)="checkout()">Check Out</button>
               </div>
             </div>
           </div>
@@ -205,5 +170,3 @@
   </div>
 </div>
 
-<a class="btn-primary btn" routerLink="/checkout"> Check Out </a>
-<button class="btn-primary btn" (click)="checkout()">test Check Out</button>
