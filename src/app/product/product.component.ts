@@ -6,7 +6,18 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./product.component.css"],
 })
 export class ProductComponent implements OnInit {
-  constructor() {}
+  constructor() { }
 
-  ngOnInit(): void {}
+  addToCartProducts = [];
+
+  ngOnInit(): void {
+    this.addToCartProducts = localStorage?.getItem('products') ? JSON.parse(localStorage?.getItem('products')) : [];
+  }
+
+  addToCart(prductName) {
+    if (prductName && !(this.addToCartProducts?.includes(prductName))) {
+      this.addToCartProducts.push(prductName)
+      localStorage.setItem('products', JSON.stringify(this.addToCartProducts))
+    }
+  }
 }
