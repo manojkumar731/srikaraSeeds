@@ -1,0 +1,94 @@
+@media (max-width: 575.98px) { 
+    .invoice-header{
+        display: flex;
+        flex-direction: row;
+        flex-flow: wrap;
+    }
+    .invoice-date,
+    .invoice-QR,
+    .invoice-to {
+        display: block;
+        width: 100%
+    }  
+    .invoice-price .invoice-price-row {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        justify-content: flex-end;
+        align-items: flex-end;
+        width: 100%;
+    }
+    .invoice-price .invoice-price-left .sub-price {
+        display: flex;
+        vertical-align: middle;
+        padding: 0 20px;
+        flex-direction: column;
+    }
+    .invoice-price .invoice-price-left, .invoice-price .invoice-price-right {
+        display: flex;
+        padding: 0;
+        font-size: 20px;
+        font-weight: 600;
+        width: 100%;
+        position: relative;
+        vertical-align: middle;
+    }
+    span.f-w-600 {
+        padding-right: 18px;
+    }
+    .invoice-price-right{
+        justify-content: end
+    }
+    .accordionWrap {
+    width: 100%;
+}
+.card-body {
+    flex: 1 1 auto;
+    padding: 0;
+}
+.tablediv table,
+       .tablediv thead,
+        .tablediv tbody,
+        .tablediv th,
+        .tablediv td,
+        .tablediv tr {
+        display: block;
+        }
+         
+        /* Hide table headers (but not display: none;, for accessibility) */
+        .tablediv thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+        }
+         
+        .tablediv tr { border: 1px solid #ccc; }
+          
+        .tablediv td {
+        /* Behave like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+        white-space: normal;
+        text-align:left;
+        }
+         
+        .tablediv td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align:left;
+        font-weight: bold;
+        }
+         
+        /*
+        Label the data
+        */
+        .tablediv td:before { content: attr(data-title); }
+}

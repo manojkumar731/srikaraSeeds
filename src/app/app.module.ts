@@ -12,6 +12,9 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { LoginComponent } from "./login/login.component";
 import { CheckOutComponent } from "./check-out/check-out.component";
 import { HttpClientModule } from "@angular/common/http";
+import { ProductDetailsComponent } from '@src/app/product-details/product-details.component';
+import { AdminUserlistComponent } from '@src/app/admin-userlist/admin-userlist.component';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +25,9 @@ import { HttpClientModule } from "@angular/common/http";
     AddCartComponent,
     OrderPageComponent,
     LoginComponent,
-    CheckOutComponent
+    CheckOutComponent,
+    ProductDetailsComponent,
+    AdminUserlistComponent
   ],
   imports: [
     BrowserModule,
