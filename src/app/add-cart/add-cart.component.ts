@@ -21,7 +21,11 @@ export class AddCartComponent implements OnInit {
   }
 
   checkout() {
-    this.router.navigate(["/checkout"]);
+    let isLoggenIn = localStorage.getItem('token')
+    if (isLoggenIn)
+      this.router.navigate(["/checkout"]);
+    else
+      this.router.navigate(["/checkout"]);
   }
 
   async removeProduct(prdct) {
