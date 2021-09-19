@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  isLoggedIn: string;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.isLoggedIn = localStorage.getItem('token')
   }
 
 }

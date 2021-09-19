@@ -25,7 +25,7 @@ export class AddCartComponent implements OnInit {
     if (isLoggenIn)
       this.router.navigate(["/checkout"]);
     else
-      this.router.navigate(["/checkout"]);
+      this.router.navigate(["/login"]);
   }
 
   async removeProduct(prdct) {

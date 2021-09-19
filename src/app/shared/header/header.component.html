@@ -1,47 +1,32 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <button
-    class="navbar-toggler"
-    type="button"
-    data-toggle="collapse"
-    data-target="#navbarTogglerDemo03"
-    aria-controls="navbarTogglerDemo03"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
-  >
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+    aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="logo">
-    <a class="navbar-brand" href="./"
-      ><img src="assets/img/srikaraSeedsLogo.png"
-    /></a>
+    <a class="navbar-brand" href="./"><img src="assets/img/srikaraSeedsLogo.png" /></a>
   </div>
 
-  <div
-    class="collapse navbar-collapse justify-content-end"
-    id="navbarTogglerDemo03"
-  >
+  <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo03">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
         <a class="nav-link" href="#"><i class="fa fa-home"></i> Home </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"
-          ><i class="fa fa-suitcase"></i> PO Status</a
-        >
+        <a class="nav-link" routerLink="/addCart"><i class="fa fa-shopping-cart"></i> My Cart</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fa fa-user"></i> My Account</a>
+      <li class="nav-item" *ngIf="!isLoggedIn;else loggedIn">
+        <a class="nav-link" routerLink="/login"><i class="fa fa-lock"></i> Login</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/addCart"
-          ><i class="fa fa-shopping-cart"></i> My Cart</a
-        >
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/login"
-          ><i class="fa fa-lock"></i> Login</a
-        >
-      </li>
+      <ng-template #loggedIn>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/purchaseOrder"><i class="fa fa-suitcase"></i> PO Status</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/login"><i class="fa fa-lock"></i> Logout</a>
+        </li>
+      </ng-template>
     </ul>
   </div>
 </nav>

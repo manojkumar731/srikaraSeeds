@@ -33,6 +33,7 @@
             </button>
             <ng-template #addedToCart>
               <button class="btn" disabled>Added to cart</button>
+              <button class="add_to_cart_button" routerLink="/addCart">Go to cart</button>
             </ng-template>
           </div>
         </div>
@@ -55,6 +56,7 @@
               *ngIf="!addToCartProducts.includes('SRIKAR_ZERCY'); else addedToCart1">Add to cart</button>
             <ng-template #addedToCart1>
               <button class="btn" disabled>Added to cart</button>
+              <button class="add_to_cart_button" routerLink="/addCart">Go to cart</button>
             </ng-template>
           </div>
         </div>
