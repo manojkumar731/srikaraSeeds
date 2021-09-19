@@ -1,1 +1,189 @@
-<p>order-page works!</p>
+<div class="container">
+  <div id="accordion">
+    <div class="card-header" id="headingOne">
+      <button
+        class="
+          col-sm-12
+          accordionWrap
+          d-flex
+          justify-content-between
+          btn btn-link
+        "
+        data-toggle="collapse"
+        data-target="#collapseOne"
+        aria-expanded="true"
+        aria-controls="collapseOne"
+      >
+        <span class="text-left accordion-title">
+          <strong>Order ID</strong>
+          0000123DSS
+        </span>
+        <span class="text-right accordion-title">
+          <strong>Status</strong>
+          Approved
+        </span>
+      </button>
+    </div>
+
+    <div
+      id="collapseOne"
+      class="collapse show"
+      aria-labelledby="headingOne"
+      data-parent="#accordion"
+    >
+      <div class="card-body">
+        <div class="col-md-12">
+          <div class="invoice">
+            <!-- begin invoice-company -->
+            <div class="invoice-company text-inverse f-w-600">
+              <span class="hidden-print">
+                <a href="javascript:;" class="btn btn-sm btn-white m-b-10 p-l-5"
+                  ><i class="fa fa-file t-plus-1 text-danger fa-fw fa-lg"></i>
+                  Export as PDF</a
+                >
+                <a
+                  href="javascript:;"
+                  onclick="window.print()"
+                  class="btn btn-sm btn-white m-b-10 p-l-5"
+                  ><i class="fa fa-print t-plus-1 fa-fw fa-lg"></i> Print</a
+                >
+              </span>
+            </div>
+            <!-- end invoice-company -->
+            <!-- begin invoice-header -->
+            <div class="invoice-header">
+              <div class="invoice-to">
+                <small>Delivered to</small>
+                <address class="m-t-5 m-b-5">
+                  <strong class="text-inverse">Company Name</strong><br />
+                  Street Address<br />
+                  City, Zip Code<br />
+                  Phone: (123) 456-7890<br />
+                  Fax: (123) 456-7890
+                </address>
+              </div>
+              <div class="invoice-QR">
+                <img src="./assets/img/qrCode.png" alt="" />
+              </div>
+              <div class="invoice-date">
+                <small>Invoice / July period</small>
+                <div class="date text-inverse m-t-5">August 3,2012</div>
+                <div class="invoice-detail">
+                  <strong>Order ID</strong> 0000123DSS<br />
+                </div>
+              </div>
+            </div>
+            <!-- end invoice-header -->
+            <!-- begin invoice-content -->
+            <div class="invoice-content">
+              <!-- begin table-responsive -->
+              <!-- <div class="table-responsive tablediv">
+                <table
+                  class="table table-bordered table-striped table-condensed cf"
+                >
+                  <thead class="cf">
+                    <tr>
+                      <th>Product Name</th>
+                      <th class="text-center" width="10%">Price</th>
+                      <th class="text-center" width="10%">Quantity</th>
+                      <th class="text-right" width="20%">Amount</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Product Name</td>
+                      <td class="text-center">Price</td>
+                      <td class="text-center">Quantity</td>
+                      <td class="text-right">Amount</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div> -->
+
+              <div id="no-more-tables" class="tablediv">
+                <table
+                  class="
+                    col-sm-12
+                    table-bordered table-striped table-condensed
+                    cf
+                  "
+                >
+                  <thead class="cf">
+                    <tr>
+                      <th>Product Name</th>
+                      <th>Price</th>
+                      <th>Quantity</th>
+                      <th>Amount</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td data-title="Product Name">Lesson</td>
+                      <td data-title="Price">Lesson</td>
+                      <td data-title="Quantity">Lesson</td>
+                      <td data-title="Amount">Lesson</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- end table-responsive -->
+              <!-- begin invoice-price -->
+              <div class="invoice-price">
+                <div class="invoice-price-left">
+                  <div class="invoice-price-row">
+                    <div class="sub-price">
+                      <small>SUBTOTAL</small>
+                      <span class="text-inverse">$4,500.00</span>
+                    </div>
+                    <div class="sub-price">
+                      <i class="fa fa-plus text-muted"></i>
+                    </div>
+                    <div class="sub-price">
+                      <small>PAYPAL FEE (5.4%)</small>
+                      <span class="text-inverse">$108.00</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="invoice-price-right">
+                  <small>TOTAL</small> <span class="f-w-600">$4508.00</span>
+                </div>
+              </div>
+              <!-- end invoice-price -->
+            </div>
+            <!-- end invoice-content -->
+            <!-- begin invoice-note -->
+            <!-- <div class="invoice-note">
+              * Make all cheques payable to [Your Company Name]<br />
+              * Payment is due within 30 days<br />
+              * If you have any questions concerning this invoice, contact
+              [Name, Phone Number, Email]
+            </div> -->
+            <!-- end invoice-note -->
+            <!-- begin invoice-footer -->
+            <div class="invoice-footer">
+              <p class="text-center m-b-5 f-w-600">
+                THANK YOU FOR YOUR BUSINESS
+              </p>
+              <p class="text-center">
+                <span class="m-r-10"
+                  ><i class="fa fa-fw fa-lg fa-globe"></i>
+                  www.srikarseeds.com/</span
+                >
+                <span class="m-r-10"
+                  ><i class="fa fa-fw fa-lg fa-phone-volume"></i> T:91
+                  8008037744</span
+                >
+                <span class="m-r-10"
+                  ><i class="fa fa-fw fa-lg fa-envelope"></i>
+                  customerservice@srikarseeds.com</span
+                >
+              </p>
+            </div>
+            <!-- end invoice-footer -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
