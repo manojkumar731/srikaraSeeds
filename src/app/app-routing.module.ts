@@ -16,7 +16,7 @@ export class AppRoutingModule {}
 const router: Routes = [
   { path: "", redirectTo: "product", pathMatch: "full" },
   { path: "product", component: ProductComponent },
-  { path: "productDetail", component: ProductDescripitionComponent },
+  // { path: "productDetail", component: ProductDescripitionComponent },
   { path: "login", component: LoginComponent },
   { path: "addCart", component: AddCartComponent },
   { path: "checkout", component: CheckOutComponent },

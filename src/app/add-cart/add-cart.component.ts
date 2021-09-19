@@ -8,8 +8,11 @@ import { Router } from "@angular/router";
 })
 export class AddCartComponent implements OnInit {
   constructor(public router: Router) {}
+  addToCartProducts = [];
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.addToCartProducts = localStorage?.getItem('products') ? JSON.parse(localStorage?.getItem('products')) : [];
+  }
 
   checkout() {
     this.router.navigate(["/checkout"]);

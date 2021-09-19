@@ -28,7 +28,7 @@
 
           <div class="product-option-shop">
             <button class="add_to_cart_button" (click)="addToCart('TARANG BG II')"
-              *ngIf="!addToCartProducts.includes('TARANG BG II','899.00'); else addedToCart">
+              *ngIf="!addToCartProducts.includes('TARANG BG II'); else addedToCart">
               Add to cart
             </button>
             <ng-template #addedToCart>
