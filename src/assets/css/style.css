@@ -709,10 +709,10 @@ width: 10px;
 
 .product-bit-title h2 {
   font-family: raleway;
-  font-size: 50px;
+  font-size: 26px;
   font-weight: 200;
   margin: 0;
-  padding: 50px 0;color: #fff;
+  padding: 10px 0;color: #fff;
 }
 
 .single-product-area .zigzag-bottom {background-color: #f4f4f4}
@@ -971,15 +971,18 @@ td.actions div.coupon {
     width: 57%;
 }
 .cart_totals {
-    float: right;
-    margin-bottom: 50px;
-    width: 40%;
+
+    margin-bottom: 0px;
 }
 .cart-collaterals h2 {
     color: #007cc3;
-    font-size: 25px;
-    margin-bottom: 25px;
+    font-size: 18px;
+    margin-bottom: 15px;
     text-transform: uppercase;
+}
+.row.productCart {
+    padding: 15px;
+    border: 1px solid #e2e2e2;
 }
 div.cart-collaterals ul.products {
     list-style: outside none none;
@@ -1150,4 +1153,33 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button{background
 
 .pagination > li > a, .pagination > li > span {
   color: #007cc3;
+}
+
+.productName strong{
+    display: block;
+}
+a.remove.btn.btn-danger {
+    position: relative;
+    top: 0;
+    right: -10px;
+}
+.productName h4 {
+    margin-bottom: 0;
+}
+
+@media (max-width: 575.98px) { 
+    .single-product-area {
+        padding: 15px 0 15px;
+    }
+    .productName {
+        padding-bottom: 10px;
+    }
+
+    .product-bit-title h2{
+        font-size: 18px;
+        padding: 10px 0;
+    }
+    .cart-collaterals{
+        margin-top: 15px
+    }
 }

@@ -14,159 +14,72 @@
 <div class="single-product-area">
   <div class="zigzag-bottom"></div>
   <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="product-content-right">
-          <div class="woocommerce">
-            <form method="post" action="#">
-              <table cellspacing="0" class="shop_table cart">
-                <thead>
-                  <tr>
-                    <th class="product-remove">&nbsp;</th>
-                    <th class="product-thumbnail">&nbsp;</th>
-                    <th class="product-name">Product</th>
-                    <th class="product-price">Price</th>
-                    <th class="product-quantity">Quantity</th>
-                    <th class="product-subtotal">Total</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr class="cart_item">
-                    <td class="product-remove">
-                      <a title="Remove this item" class="remove" href="#">×</a>
-                    </td>
+    <div class="row product-content-right">
+      <form method="post" action="#" class="col-md-8">
+        <div class="row productCart">
+          <div class="col-md-12 productName d-flex justify-content-between">
+            <h4>TARANG BG II</h4>
+            <a title="Remove this item" class="remove btn btn-danger" href="#">
+              <i class="fa fa-close"></i
+            ></a>
+          </div>
+          <div class="col-md-3 col-5 productName">
+            <strong>Price</strong>
+            &#8377; - 300
+          </div>
+          <div class="col-md-4 col-7 productName">
+            <strong>Quantity </strong>
+            <div class="quantity buttons_added">
+              <button class="minus btn btn-danger" value="-">-</button>
 
-                    <td class="product-thumbnail">
-                      <a href="single-product.html"
-                        ><img
-                          width="145"
-                          height="145"
-                          alt="poster_1_up"
-                          class="shop_thumbnail"
-                          src="./assets/img/product-1.jpg"
-                      /></a>
-                    </td>
-
-                    <td class="product-name">
-                      <a href="single-product.html">Ship Your Idea</a>
-                    </td>
-
-                    <td class="product-price">
-                      <span class="amount">£15.00</span>
-                    </td>
-
-                    <td class="product-quantity">
-                      <div class="quantity buttons_added">
-                        <input type="button" class="minus" value="-" />
-                        <input
-                          type="number"
-                          size="4"
-                          class="input-text qty text"
-                          title="Qty"
-                          value="1"
-                          min="0"
-                          step="1"
-                        />
-                        <input type="button" class="plus" value="+" />
-                      </div>
-                    </td>
-
-                    <td class="product-subtotal">
-                      <span class="amount">£15.00</span>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </form>
-
-            <div class="cart-collaterals">
-              <div class="cross-sells">
-                <h2>You may be interested in...</h2>
-                <ul class="products">
-                  <li class="product">
-                    <a href="single-product.html">
-                      <img
-                        width="325"
-                        height="325"
-                        alt="T_4_front"
-                        class="attachment-shop_catalog wp-post-image"
-                        src="./assets/img/product-2.jpg"
-                      />
-                      <h3>Ship Your Idea</h3>
-                      <span class="price"
-                        ><span class="amount">£20.00</span></span
-                      >
-                    </a>
-
-                    <a
-                      class="add_to_cart_button"
-                      data-quantity="1"
-                      data-product_sku=""
-                      data-product_id="22"
-                      rel="nofollow"
-                      href="single-product.html"
-                      >Select options</a
-                    >
-                  </li>
-
-                  <li class="product">
-                    <a href="single-product.html">
-                      <img
-                        width="325"
-                        height="325"
-                        alt="T_4_front"
-                        class="attachment-shop_catalog wp-post-image"
-                        src="./assets/img/product-4.jpg"
-                      />
-                      <h3>Ship Your Idea</h3>
-                      <span class="price"
-                        ><span class="amount">£20.00</span></span
-                      >
-                    </a>
-
-                    <a
-                      class="add_to_cart_button"
-                      data-quantity="1"
-                      data-product_sku=""
-                      data-product_id="22"
-                      rel="nofollow"
-                      href="single-product.html"
-                      >Select options</a
-                    >
-                  </li>
-                </ul>
-              </div>
-
-              <div class="cart_totals">
-                <h2>Cart Totals</h2>
-
-                <table cellspacing="0">
-                  <tbody>
-                    <tr class="cart-subtotal">
-                      <th>Cart Subtotal</th>
-                      <td><span class="amount">£15.00</span></td>
-                    </tr>
-
-                    <tr class="shipping">
-                      <th>Shipping and Handling</th>
-                      <td>Free Shipping</td>
-                    </tr>
-
-                    <tr class="order-total">
-                      <th>Order Total</th>
-                      <td>
-                        <strong><span class="amount">£15.00</span></strong>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-                <button class="btn-primary btn mt-4" (click)="checkout()">Check Out</button>
-              </div>
+              <input
+                type="number"
+                size="4"
+                class="input-text qty text"
+                title="Qty"
+                value="1"
+                min="0"
+                step="1"
+              />
+              <button class="minus btn btn-primary" value="+">+</button>
             </div>
           </div>
+          <div class="col-md-3 col-12 productName">
+            <strong>Total</strong>
+            &#8377; - 300
+          </div>
+        </div>
+      </form>
+
+      <div class="cart-collaterals col-md-4">
+        <div class="cart_totals">
+          <h2>Cart Totals</h2>
+
+          <table cellspacing="0" class="table-responsive table">
+            <tbody>
+              <tr class="cart-subtotal">
+                <th>Cart Subtotal</th>
+                <td><span class="amount">£15.00</span></td>
+              </tr>
+
+              <tr class="shipping">
+                <th>Shipping and Handling</th>
+                <td>Free Shipping</td>
+              </tr>
+
+              <tr class="order-total">
+                <th>Order Total</th>
+                <td>
+                  <strong><span class="amount">£15.00</span></strong>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <button class="btn-primary btn mt-4" (click)="checkout()">
+            Check Out
+          </button>
         </div>
       </div>
     </div>
   </div>
 </div>
-
