@@ -51,7 +51,11 @@
 
           <div class="product-option-shop">
             <button class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow"
-              (click)="addToCart('TARANG BG I')">Add to cart</button>
+              (click)="addToCart('SRIKAR_ZERCY')"
+              *ngIf="!addToCartProducts.includes('SRIKAR_ZERCY'); else addedToCart1">Add to cart</button>
+            <ng-template #addedToCart1>
+              <button class="btn" disabled>Added to cart</button>
+            </ng-template>
           </div>
         </div>
       </div>

@@ -15,32 +15,31 @@
   <div class="zigzag-bottom"></div>
   <div class="container">
     <div class="row product-content-right">
-      <form method="post" action="#" class="col-md-8">
-        <div class="row productCart" *ngFor="let item of addToCartProducts">
+      <div method="post" class="col-md-8">
+        <div class="row productCart" *ngFor="let item of addToCartProducts; index as indx">
           <div class="col-md-12 productName d-flex justify-content-between">
             <h4>{{item}}</h4>
-            <a title="Remove this item" class="remove btn btn-danger" href="#">
-              <i class="fa fa-close"></i></a>
+            <button title="Remove this item" class="remove btn btn-danger" (click)="removeProduct(item)">
+              <i class="fa fa-close"></i></button>
           </div>
           <div class="col-md-3 col-5 productName">
             <strong>Price</strong>
-            &#8377; 300
+            &#8377; 100
           </div>
           <div class="col-md-4 col-7 productName">
             <strong>Quantity </strong>
             <div class="quantity buttons_added">
-              <button class="minus btn btn-danger">-</button>
-
-              <input type="number" size="4" class="input-text qty text" title="Qty" value="1" min="0" step="1" />
-              <button class="minus btn btn-primary">+</button>
+              <button class="minus btn btn-danger" (click)="decrement(indx)">-</button>
+              <span class="priceNumber" id="priceNumber{{indx}}">1</span>
+              <button class="minus btn btn-primary" (click)="increment(indx)">+</button>
             </div>
           </div>
           <div class="col-md-3 col-12 productName">
             <strong>Total</strong>
-            &#8377; 300
+            &#8377; <span #totalAmnt id="totalAmnt{{indx}}" class="totalAmnt" (click)="totalAmount()">100</span>
           </div>
         </div>
-      </form>
+      </div>
 
       <div class="cart-collaterals col-md-4">
         <div class="cart_totals">
@@ -48,20 +47,15 @@
 
           <table cellspacing="0" class="table-responsive table">
             <tbody>
-              <tr class="cart-subtotal">
+              <!-- <tr class="cart-subtotal">
                 <th>Cart Subtotal</th>
                 <td><span class="amount">£15.00</span></td>
-              </tr>
-
-              <tr class="shipping">
-                <th>Shipping and Handling</th>
-                <td>Free Shipping</td>
-              </tr>
+              </tr> -->
 
               <tr class="order-total">
                 <th>Order Total</th>
                 <td>
-                  <strong><span class="amount">£15.00</span></strong>
+                  <strong><span class="amount">&#8377; {{finalAmmount}}</span></strong>
                 </td>
               </tr>
             </tbody>

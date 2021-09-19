@@ -8,6 +8,9 @@ import { AddCartComponent } from '@src/app/add-cart/add-cart.component';
 import { ProductComponent } from '@src/app/product/product.component';
 import { HeaderComponent } from '@src/app/shared/header/header.component';
 import { OrderPageComponent } from '@src/app/order-page/order-page.component';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { LoginComponent } from "./login/login.component";
+import { CheckOutComponent } from "./check-out/check-out.component";
 
 @NgModule({
   declarations: [
@@ -16,10 +19,17 @@ import { OrderPageComponent } from '@src/app/order-page/order-page.component';
     ProductComponent,
     HeaderComponent,
     AddCartComponent,
-    OrderPageComponent
+    OrderPageComponent,
+    LoginComponent,
+    CheckOutComponent
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule     
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
