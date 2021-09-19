@@ -1182,4 +1182,8 @@ a.remove.btn.btn-danger {
     .cart-collaterals{
         margin-top: 15px
     }
+    .invoice-to {
+        width: 100%;
+        display: block;
+    }
 }
