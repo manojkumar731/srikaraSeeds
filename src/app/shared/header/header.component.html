@@ -18,13 +18,14 @@
       <li class="nav-item" *ngIf="!isLoggedIn;else loggedIn">
         <a class="nav-link" routerLink="/login"><i class="fa fa-lock"></i> Login</a>
       </li>
+
       <ng-template #loggedIn>
         <li class="nav-item">
           <a class="nav-link" routerLink="/purchaseOrder"><i class="fa fa-suitcase"></i> PO Status</a>
         </li>
-        
+
         <li class="nav-item">
-          <a class="nav-link" routerLink="/login"><i class="fa fa-lock"></i> Logout</a>
+          <a class="nav-link" (click)="logOut()"><i class="fa fa-lock"></i> Logout</a>
         </li>
       </ng-template>
     </ul>

@@ -11,6 +11,7 @@ import { OrderPageComponent } from '@src/app/order-page/order-page.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { LoginComponent } from "./login/login.component";
 import { CheckOutComponent } from "./check-out/check-out.component";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { CheckOutComponent } from "./check-out/check-out.component";
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule     
+    ReactiveFormsModule,
+    HttpClientModule   
   ],
   providers: [],
   bootstrap: [AppComponent],

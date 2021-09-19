@@ -1,0 +1,17 @@
+.btn-primary:disabled {
+  color: #b8b6b6;
+  background-color: #e2e2e2;
+  border-color: #e2e2e2;
+}
+
+.btn:focus {
+  box-shadow: unset;
+}
+
+.err {
+  display: inline-block;
+  float: right;
+  position: relative;
+  right: -31px;
+  cursor: pointer;
+}
