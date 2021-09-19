@@ -1,0 +1,11 @@
+.single-shop-product {
+    margin-bottom: 50px;
+    padding: 15px;
+    border: 1px solid #e2e2e2;
+}
+.product-upper {
+    text-align: center;
+}
+.product-upper img {
+    width: 192px;
+}

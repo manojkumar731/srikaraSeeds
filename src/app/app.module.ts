@@ -9,8 +9,10 @@ import { ProductComponent } from '@src/app/product/product.component';
 import { HeaderComponent } from '@src/app/shared/header/header.component';
 import { OrderPageComponent } from '@src/app/order-page/order-page.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { LoginComponent } from "./login/login.component";
-import { CheckOutComponent } from "./check-out/check-out.component";
+import { LoginComponent } from '@src/app/login/login.component';
+import { CheckOutComponent } from '@src/app/check-out/check-out.component';
+import { ProductDetailsComponent } from '@src/app/product-details/product-details.component';
+import { AdminUserlistComponent } from '@src/app/admin-userlist/admin-userlist.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { CheckOutComponent } from "./check-out/check-out.component";
     AddCartComponent,
     OrderPageComponent,
     LoginComponent,
-    CheckOutComponent
+    CheckOutComponent,
+    ProductDetailsComponent,
+    AdminUserlistComponent
   ],
   imports: [
     BrowserModule,
